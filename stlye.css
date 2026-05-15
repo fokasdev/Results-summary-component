@@ -1,0 +1,129 @@
+:root {
+    /* Színek a kategóriákhoz */
+    --reaction-color: #F55F5F;
+    --memory-color: #FFB21E;
+    --verbal-color: #00BB8F;
+    --visual-color: #1125D6;
+    /* Színátmenetek */
+    --card-gradient: linear-gradient(to bottom, #6743FF, #312CEA);
+    --circle-gradient: linear-gradient(to bottom, #4D21C9, rgba(37, 33, 201, 0));
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Figtree", sans-serif;
+    background-color: #ECF2FF;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-container{
+    display: flex;
+    background-color: white;
+    width: 100%;
+    max-width: 48rem;
+    box-shadow: 20px 20px 40px rgba(48, 59, 89, 0.05);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.result-panel{
+    flex: 1;
+    background: var(--card-gradient);
+    padding: 2.5rem;
+    text-align: center;
+    color: #CAC9FF;
+    border-radius: 2rem;
+}
+
+.score-circle{
+    width: 8.4rem;
+    height: 8.4rem;
+    margin: 1.85rem auto;
+    background: var(--circle-gradient);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-num{
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: white;
+}
+
+.status{
+    color: white;
+    font-size: 1.9rem;
+    margin: 10px 0;
+}
+
+.summary-panel{
+    flex: 1;
+    padding: 40px;
+}
+
+.summary-title{
+    color: #303b59;
+    margin-bottom: 24px;
+}
+
+.stat-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 0.9rem;
+}
+
+.label-gruop{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reaction { background-color: rgba(245, 95, 95, 0.08); color: var(--reaction-color); }
+.memory   { background-color: rgba(255, 178, 30, 0.08); color: var(--memory-color); }
+.verbal   { background-color: rgba(0, 187, 143, 0.08); color: var(--verbal-color); }
+.visual   { background-color: rgba(17, 37, 214, 0.08); color: var(--visual-color); }
+
+.stat-score { color: #303B59; font-weight: bold; margin: 0; }
+.stat-score strong { color: black; }
+
+.continue-btn{
+    width: 100%;
+    padding: 16px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 1.85rem;
+    background-color: #303B59;
+    color: white;
+    font-size: 1.05rem;
+    cursor: pointer;
+    
+}
+
+.continue-btn:hover{
+    background: var(--card-gradient);
+}
+
+.continue-btn:active{
+    transform: scale(0.95);
+    filter: brightness(0.90);
+}
+
+@media(max-width: 600px) {
+    .main-container{
+        flex-direction: column;
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .result-panel{
+        border-radius: 0 0 2rem 2rem;
+    }
+}
